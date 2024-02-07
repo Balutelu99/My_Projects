@@ -61,13 +61,13 @@ FROM [Portfolio project]..Sleep_health_and_lifestyle_dataset
 WHERE Stress_Level >= 6
 ORDER BY Stress_Level DESC ;
 
--- stress_level and blood_pressure of insomnia people which are high in levels 
+-- stress_level and blood_pressure are factors which triggers insomnia in people which are high in levels 
 SELECT Occupation,Stress_Level,Sleep_Duration,Sleep_Disorder
 FROM [Portfolio project]..Sleep_health_and_lifestyle_dataset
 WHERE Sleep_Disorder IN (select Sleep_Disorder FROM [Portfolio project]..Sleep_health_and_lifestyle_dataset
 where Sleep_Disorder = 'Insomnia' )
 
--- stress_level and blood_pressure of insomnia people which are high in levels
+-- stress_level and blood_pressure are factors which triggers Sleep Apnea in people which are high in levels
 
 SELECT Occupation,Stress_Level,Blood_Pressure,BMI_Category,Sleep_Disorder
 FROM [Portfolio project]..Sleep_health_and_lifestyle_dataset
